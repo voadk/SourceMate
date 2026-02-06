@@ -48,10 +48,14 @@
 		"vite": "^7.3.1"
 	},
 	"dependencies": {
+		"@ai-sdk/openai": "^3.0.25",
+		"@openrouter/ai-sdk-provider": "^2.1.1",
 		"@oslojs/jwt": "^0.3.0",
 		"@oslojs/otp": "^1.1.0",
 		"@std/http": "npm:@jsr/std__http",
+		"ai": "^6.0.73",
 		"neverthrow": "^8.2.0",
-		"valibot": "^1.2.0"
+		"valibot": "^1.2.0",
+		"zod": "^4.3.6"
 	}
 }
