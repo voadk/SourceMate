@@ -3,5 +3,10 @@
   "version": "0.1.0",
   "workspaces": [
     "apps/*"
-  ]
+  ],
+  "scripts": {
+    "dev": "bun dev:backend & bun dev:frontend",
+    "dev:backend": "cd apps/backend && bun dev",
+    "dev:frontend": "cd apps/frontend && bun dev"
+  }
 }
