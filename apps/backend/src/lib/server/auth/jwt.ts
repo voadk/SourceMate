@@ -11,6 +11,8 @@ import { AUTH_SECRET } from '$env/static/private';
 import { getRequestEvent } from '$app/server';
 import { tryOrNull } from '$lib/helpers/error';
 
+if (!AUTH_SECRET) throw 'No AUTH_SECRET environment variable';
+
 const secret = Buffer.from(AUTH_SECRET, 'base64');
 
 const key = await crypto.webcrypto.subtle.importKey(
@@ -51,6 +53,7 @@ async function verifyAndDecodeJWT(jwt: string) {
 		signature,
 		signatureMessage
 	);
+
 	if (!validSignature) throw new Error('Invalid signature');
 
 	const claims = new JWTRegisteredClaims(payload);

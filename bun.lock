@@ -4,9 +4,6 @@
   "workspaces": {
     "": {
       "name": "sourcemate",
-      "devDependencies": {
-        "@types/bun": "^1.3.6",
-      },
     },
     "apps/backend": {
       "name": "sveltevitest",
